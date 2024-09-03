@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     // Fetch data using axios
     // axios.get('https://jsonplaceholder.typicode.com/posts')
-    axios.get('http://localhost/student_management/back-end/trial.php')
+    axios.get('http://localhost/student_management/back-end/api/v/trial.php')
       .then(response => {
         // Set the data in state
         setData(response.data);
@@ -26,6 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>My name is {data.length > 0 ? data.name : 'N/A'}</h1>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
